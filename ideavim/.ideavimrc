@@ -71,7 +71,7 @@ map <leader>f <Action>(ReformatCode)
 nmap <leader>? :action GotoAction<CR>
 "" Map <leader>d to start debug
 map <leader>d <Action>(Debug)
-nnoremap <leader>s <Action>(Run)
+nmap <leader>s <Action>(Run)
 nmap <leader>tn :action NextTab<CR>
 nmap <leader>tp :action PreviousTab<CR>
 nmap <C-p> :action ParameterInfo<CR>
