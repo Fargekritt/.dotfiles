@@ -44,6 +44,7 @@ nmap <leader>hs5 :action SetHarpoon5<CR>
 nmap <leader>wn :action NextSplitter<CR>
 nmap <leader>wp :action PrevSplitter<CR>
 nmap <leader>wS :action SplitVertically<CR>
+nmap <leader>wo :action MoveEditorToOppositeTabGroup<CR> 
 nmap <leader>wsh :action SplitHorizontally<CR>
 nmap <leader>wsc :action Unsplit<CR>
 " Code refactor
@@ -65,13 +66,16 @@ nmap <C-k> :action MoveStatementUp<CR>
 xmap <C-j> :action MoveStatementDown<CR>
 nmap <C-j> :action MoveStatementDown<CR>
 xmap <C-k> :action MoveStatementUp<CR>
+nmap <Backspace> :action Back<CR>
 "" Map \r to the Reformat Code action
 map <leader>f <Action>(ReformatCode)
 
 nmap <leader>? :action GotoAction<CR>
 "" Map <leader>d to start debug
-map <leader>d <Action>(Debug)
+nmap <leader>d <Action>(Debug)
 nmap <leader>s <Action>(Run)
+nmap <leader>bs <Action>(BuildSolutionAction)
+nmap <leader>bb <Action>(BuildCurrentProject)
 nmap <leader>tn :action NextTab<CR>
 nmap <leader>tp :action PreviousTab<CR>
 nmap <C-p> :action ParameterInfo<CR>
