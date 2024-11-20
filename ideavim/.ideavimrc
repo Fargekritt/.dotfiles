@@ -73,6 +73,7 @@ map <leader>f <Action>(ReformatCode)
 nmap <leader>? :action GotoAction<CR>
 "" Map <leader>d to start debug
 nmap <leader>d <Action>(Debug)
+nmap <leader>S <Action>(ChooseRunConfiguration)
 nmap <leader>s <Action>(Run)
 nmap <leader>bs <Action>(BuildSolutionAction)
 nmap <leader>bb <Action>(BuildCurrentProject)
