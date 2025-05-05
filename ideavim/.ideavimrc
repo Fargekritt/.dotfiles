@@ -11,7 +11,7 @@ set showcmd
 set clipboard=unnamedplus,unnamed,ideaput
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
-set scrolloff=25
+set scrolloff=200
 
 " Do incremental searching.
 set incsearch
@@ -70,7 +70,8 @@ nmap <C-k> :action MoveStatementUp<CR>
 xmap <C-j> :action MoveStatementDown<CR>
 nmap <C-j> :action MoveStatementDown<CR>
 xmap <C-k> :action MoveStatementUp<CR>
-nmap <Backspace> :action Back<CR>
+nmap <Leader>b :action Back<CR>
+nmap <Leader>B :action Forward<CR>
 "" Map \r to the Reformat Code action
 map <leader>f <Action>(ReformatCode)
 
@@ -79,8 +80,6 @@ nmap <leader>? :action GotoAction<CR>
 nmap <leader>d <Action>(Debug)
 nmap <leader>S <Action>(ChooseRunConfiguration)
 nmap <leader>s <Action>(Run)
-nmap <leader>bs <Action>(BuildSolutionAction)
-nmap <leader>bb <Action>(BuildCurrentProject)
 nmap <leader>tn :action NextTab<CR>
 nmap <leader>tp :action PreviousTab<CR>
 nmap <C-p> :action ParameterInfo<CR>
