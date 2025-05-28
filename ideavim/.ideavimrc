@@ -87,6 +87,8 @@ imap <C-p> <C-o>:action ParameterInfo<CR>
 nmap <leader>n :action GotoNextError<CR>
 nmap <leader>vp :action VcsShowPrevChangeMarker<CR>
 nmap <leader>vn :action VcsShowNextChangeMarker<CR>
+nmap ª :action VcsShowPrevChangeMarker<CR>
+nmap √ :action VcsShowNextChangeMarker<CR>
 map gh <Action>(ShowErrorDescription)
 "" Map \b to toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
