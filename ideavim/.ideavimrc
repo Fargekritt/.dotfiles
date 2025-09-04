@@ -77,7 +77,8 @@ map <leader>f <Action>(ReformatCode)
 
 nmap <leader>? :action GotoAction<CR>
 "" Map <leader>d to start debug
-nmap <leader>d <Action>(Debug)
+nmap <leader>D <Action>(Debug)
+nmap <leader>dt :action ToggleLineBreakpoint<CR>
 nmap <leader>S <Action>(ChooseRunConfiguration)
 nmap <leader>s <Action>(Run)
 nmap <leader>tn :action NextTab<CR>
