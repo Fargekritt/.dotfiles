@@ -5,7 +5,6 @@
 
 "" -- Suggested options --
 let mapleader = " "
-set number
 set relativenumber
 set showcmd
 set clipboard=unnamedplus,unnamed,ideaput
@@ -17,8 +16,7 @@ set scrolloff=200
 set incsearch
 
 " Don't use Ex mode, use Q for formatting.
-map Q gq
-
+map Q gq 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
 " Highlight copied text
@@ -70,10 +68,8 @@ nmap <leader>tp :action PreviousTab<CR>
 " Code refactor
 nmap <leader>ri :action Inline<CR>
 nmap <leader>rr :action RenameElement<CR>
-nmap <leader>rev :action IntroduceVariable<CR>
 vmap <leader>rev :action IntroduceVariable<CR>
 nmap <leader>rem :action ExtractMethod<CR>
-vmap <leader>rem :action ExtractMethod<CR>
 nmap <leader>rm :action Move<CR>
 nmap <leader>ro :action OptimizeImports<CR>
 nmap <leader>rG :action Generate<CR>
@@ -86,8 +82,9 @@ nmap <Leader>B :action Forward<CR>
 nmap <leader>n :action GotoNextError<CR>
 nmap <leader>vp :action VcsShowPrevChangeMarker<CR>
 nmap <leader>vn :action VcsShowNextChangeMarker<CR>
-nmap ª :action VcsShowPrevChangeMarker<CR> " Mac Weird keymapping workaround, husker ikke va keybinden er lenger, cmd+alt+ noe kanskje
-nmap √ :action VcsShowNextChangeMarker<CR>
+" Mac Weird keymapping workaround 
+nmap ª :action VcsShowPrevChangeMarker<CR> " alt + k
+nmap √ :action VcsShowNextChangeMarker<CR> " alt + j
 
 " Code movement
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
@@ -115,6 +112,12 @@ nmap <leader>dt :action ToggleLineBreakpoint<CR>
 
 " Custom actions
 command! Blame :action Annotate " You cant hide from Git Blame
- 
+command! Line set relativenumber!
+command! Testing :call Test()
+function Test()
+    echo "You Cant hide!!"
+    :action Annotate
+endfunction
+
 set which-key
 set notimeout
